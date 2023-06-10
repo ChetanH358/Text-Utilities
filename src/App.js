@@ -9,6 +9,7 @@ import React, { useState } from "react";
 function App() {
   const [mode, setmode] = useState("secondary");
   const [Textmode, setTextmode] = useState("light");
+  const [Textcolor, setTextcolor] = useState("text-primary");
   const [alert, setalert] = useState(null);
 
   // our alert is going to be an object by defalut it is null
@@ -25,11 +26,13 @@ function App() {
   const toggleMode = () => {
     if (mode === "secondary" || mode === "light") {
       setmode("dark");
+      setTextcolor("text-light");
       setTextmode("dark");
       document.body.style.backgroundColor = "#212529";
       showAlert("Dark mode has been enabled", "success");
     } else {
       setmode("light");
+      setTextcolor("text-dark");
       setTextmode("light");
       document.body.style.backgroundColor = "white";
       showAlert("light mode has been enabled", "success");
@@ -49,6 +52,7 @@ function App() {
         showAlert={showAlert}
         heading="Enter the text to Analyze : "
         Textmode={Textmode}
+        Textcolor={Textcolor}
       ></TextForm>
     </>
   );
