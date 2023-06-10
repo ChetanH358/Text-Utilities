@@ -103,7 +103,6 @@ export default function Navbar(props) {
           </div>
         </div>
       </nav>
-      <h1> Hello Good Morning How may I help you</h1>
     </>
   );
 }

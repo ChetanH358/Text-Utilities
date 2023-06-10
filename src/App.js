@@ -9,7 +9,7 @@ import React, { useState } from "react";
 function App() {
   const [mode, setmode] = useState("secondary");
   const [Textmode, setTextmode] = useState("light");
-  const [Textcolor, setTextcolor] = useState("text-primary");
+  const [Textcolor, setTextcolor] = useState("text-dark");
   const [alert, setalert] = useState(null);
 
   // our alert is going to be an object by defalut it is null
